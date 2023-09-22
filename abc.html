@@ -1,0 +1,63 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none">
+    <path d="M7.70928 1.20637L4.14053 4.77512L2.29053 2.92668C1.88897 2.52512 1.2374 2.52512 0.83584 2.92668C0.434277 3.32824 0.434277 3.97981 0.83584 4.38137L3.43115 6.97668C3.82178 7.36731 4.45615 7.36731 4.84678 6.97668L9.1624 2.66106C9.56396 2.25949 9.56396 1.60793 9.1624 1.20637C8.76084 0.804807 8.11084 0.804807 7.70928 1.20637Z" fill="#FFFCEE"/>
+  </svg>
+  <img src="./images/images.png" alt=""> -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <script>
+      const catData = [
+      {
+    others: {
+      views: '15000k',
+    },
+  },
+  
+      {
+    others: {
+      views: '5000k',
+    },
+  },
+  {
+    others: {
+      views: '8000k',
+    },
+  },
+  {
+    others: {
+      views: '12000k',
+    },
+  },
+  {
+    others: {
+      views: '3000k',
+    },
+  },
+];
+
+
+function sortByViews(array) {
+  return array.sort((a, b) => {
+    const viewsA = parseInt(a.others.views.replace('K', '000')); // Convert 'K' to 000 for numeric comparison
+    const viewsB = parseInt(b.others.views.replace('K', '000'));
+    
+    return viewsB - viewsA; // Sort in descending order
+  });
+}
+
+// Example usage:
+
+
+const sortedData = sortByViews(catData);
+console.log(sortedData);
+
+    </script>
+  </body>
+  </html>
